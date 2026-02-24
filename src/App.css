@@ -1,0 +1,8 @@
+/* App core styles */
+.app {
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+}
