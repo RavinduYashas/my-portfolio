@@ -2,6 +2,8 @@ import React from 'react';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import './Projects.css';
 
+import image3 from '../assets/projectsUi/moneyMate.png';
+
 const Projects = () => {
     const projects = [
         {
@@ -25,8 +27,8 @@ const Projects = () => {
             description: 'Mobile application developed for tracking daily finances and managing budgets effectively.',
             tech: ['Kotlin'],
             type: 'Mobile App',
-            image: null,
-            link: '#'
+            image: image3,
+            link: 'https://github.com/RavinduYashas/Finance-Tracker.git'
         },
         {
             title: 'Topjob.lk Website Redesign',
