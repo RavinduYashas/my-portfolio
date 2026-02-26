@@ -2,7 +2,11 @@ import React from 'react';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import './Projects.css';
 
+import image1 from '../assets/projectsUi/csg.png';
+// import image2 from '../assets/projectsUi/ceylonSparkleGems.png';
 import image3 from '../assets/projectsUi/moneyMate.png';
+import image4 from '../assets/projectsUi/topjobs.png';
+import image5 from '../assets/projectsUi/eCare.png';
 
 const Projects = () => {
     const projects = [
@@ -11,7 +15,7 @@ const Projects = () => {
             description: 'Developed a complete backend system with analyzed data for sales, product management, and catalog operations.',
             tech: ['React', 'Node.js', 'MongoDB', 'Express'],
             type: 'Full Stack',
-            image: null, // Replace null with your imported image
+            image: image1, // Replace null with your imported image
             link: '#'
         },
         {
@@ -35,7 +39,7 @@ const Projects = () => {
             description: 'Comprehensive UI/UX redesign focusing on user experience and modern aesthetics.',
             tech: ['Figma'],
             type: 'UI/UX Design',
-            image: null,
+            image: image4,
             link: '#'
         },
         {
@@ -51,7 +55,7 @@ const Projects = () => {
             description: 'A healthcare management system designed to streamline patient records and appointments.',
             tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
             type: 'Web System',
-            image: null,
+            image: image5,
             link: '#'
         }
     ];
