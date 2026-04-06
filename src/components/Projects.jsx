@@ -7,6 +7,9 @@ import image1 from '../assets/projectsUi/csg.png';
 import image3 from '../assets/projectsUi/moneyMate.png';
 import image4 from '../assets/projectsUi/topjobs.png';
 import image5 from '../assets/projectsUi/eCare.png';
+import smartCampusImg from '../assets/projectsUi/smartCampusHub.png';
+import campusConnectImg from '../assets/projectsUi/CampusConnect.png';
+import vibestaImg from '../assets/projectsUi/vibesta.png';
 
 const Projects = () => {
     const projects = [
@@ -19,12 +22,20 @@ const Projects = () => {
             link: '#'
         },
         {
-            title: 'Vehicle Spare Parts Management System',
-            description: 'A modular vehicle repair management web app with status tracking, PDF reports, and admin dashboard.',
+            title: 'Smart Campus Operations Hub',
+            description: 'Scalable campus management platform featuring OAuth2 authentication, RBAC, and a notification system.',
+            tech: ['React', 'Spring Boot', 'MongoDB'],
+            type: 'Full Stack',
+            image: smartCampusImg,
+            link: 'https://github.com/RavinduYashas/smart-campus-operations-hub.git'
+        },
+        {
+            title: 'CampusConnect',
+            description: 'Collaborative Q&A platform for students with user management and knowledge sharing features.',
             tech: ['React', 'Node.js', 'MongoDB', 'Express'],
             type: 'Full Stack',
-            image: null,
-            link: '#'
+            image: campusConnectImg,
+            link: 'https://github.com/RavinduYashas/campusconnect-mern.git'
         },
         {
             title: 'MoneyMate Finance Tracker',
@@ -33,6 +44,14 @@ const Projects = () => {
             type: 'Mobile App',
             image: image3,
             link: 'https://github.com/RavinduYashas/Finance-Tracker.git'
+        },
+                {
+            title: 'Vibesta Music App',
+            description: 'Modern music streaming application UI/UX design focusing on seamless user experience.',
+            tech: ['Figma'],
+            type: 'UI/UX Design',
+            image: vibestaImg,
+            link: '#'
         },
         {
             title: 'Topjob.lk Website Redesign',
@@ -43,19 +62,27 @@ const Projects = () => {
             link: '#'
         },
         {
-            title: 'Video Lane - Browsing System',
-            description: 'Backend system for a video uploading and browsing platform using enterprise Java.',
-            tech: ['Java Servlets', 'JSP', 'MySQL'],
-            type: 'Backend',
-            image: null,
-            link: '#'
-        },
-        {
             title: 'Cristels-E-Care Healthcare',
             description: 'A healthcare management system designed to streamline patient records and appointments.',
             tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
             type: 'Web System',
             image: image5,
+            link: 'https://github.com/RavinduYashas/CRISTELS-E-CARE.git'
+        },
+        {
+            title: 'Vehicle Spare Parts Management System',
+            description: 'A modular vehicle repair management web app with status tracking, PDF reports, and admin dashboard.',
+            tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+            type: 'Full Stack',
+            image: null,
+            link: 'https://github.com/dilshan03/Spare-Parts-and-Repair-Management-System.git'
+        },
+        {
+            title: 'Video Lane - Browsing System',
+            description: 'Backend system for a video uploading and browsing platform using enterprise Java.',
+            tech: ['Java Servlets', 'JSP', 'MySQL'],
+            type: 'Backend',
+            image: null,
             link: '#'
         }
     ];
