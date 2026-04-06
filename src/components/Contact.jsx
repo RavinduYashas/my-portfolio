@@ -1,8 +1,44 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        // Web App URL from Google Apps Script
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbykV2zxD48oGiE5fmskLtXI6XSzBRFm55B00v0z1akUR4xUS185OMHtmECOoTN7nil6/exec";
+
+        const formDataToSubmit = new FormData();
+        formDataToSubmit.append("name", formData.name);
+        formDataToSubmit.append("email", formData.email);
+        formDataToSubmit.append("message", formData.message);
+        formDataToSubmit.append("date", new Date().toLocaleString());
+
+        // We use mode: 'no-cors' to avoid cross-origin issues with Google Apps Script
+        fetch(scriptUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formDataToSubmit
+        })
+        .then(() => {
+            // Show success and clear
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+            setTimeout(() => setStatus(''), 4000);
+        })
+        .catch((error) => {
+            console.error('Error!', error.message);
+            alert("Something went wrong. Please try again.");
+        });
+    };
     return (
         <section id="contact" className="contact bg-soft">
             <div className="container">
@@ -45,15 +81,42 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        {status === 'success' && (
+                            <div className="success-message" style={{ color: '#10b981', backgroundColor: '#d1fae5', padding: '12px', borderRadius: '6px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', fontWeight: '500' }}>
+                                <CheckCircle size={20} />
+                                <span>Send successful! Details saved to excel file.</span>
+                            </div>
+                        )}
                         <div className="form-group">
-                            <input type="text" placeholder="Your Name" required />
+                            <input 
+                                type="text" 
+                                name="name"
+                                placeholder="Your Name" 
+                                value={formData.name}
+                                onChange={handleChange}
+                                required 
+                            />
                         </div>
                         <div className="form-group">
-                            <input type="email" placeholder="Your Email" required />
+                            <input 
+                                type="email" 
+                                name="email"
+                                placeholder="Your Email" 
+                                value={formData.email}
+                                onChange={handleChange}
+                                required 
+                            />
                         </div>
                         <div className="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea 
+                                name="message"
+                                placeholder="Your Message" 
+                                rows="5" 
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
                         </div>
                         <button type="submit" className="submit-btn">
                             Send Message
