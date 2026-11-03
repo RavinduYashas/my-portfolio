@@ -14,7 +14,7 @@ const Hero = () => {
                     </h1>
                     <h2 className="hero-subtitle">Undergraduate at SLIIT</h2>
                     <p className="hero-description">
-                        IT student with hands-on Full stack experience. Proven ability to develop and deploy responsive web applications with strong problem-solving skills. Passionate about innovative solutions and eager to contribute to a collaborative development team.
+                        Information Technology undergraduate with a passion for Software Engineering and Full-Stack Development. Experienced in building responsive web and mobile applications with strong problem-solving skills. Seeking a Software Engineering Internship to contribute to innovative software solutions.
                     </p>
 
                     <div className="hero-actions">
@@ -29,7 +29,7 @@ const Hero = () => {
                             <a href="https://linkedin.com/in/ravindu-yashas-990179366/" target="_blank" rel="noopener noreferrer" className="social-icon">
                                 <Linkedin size={22} />
                             </a>
-                            <a href="mailto:ravinduyashas421@gmail.com" className="social-icon">
+                            <a href="mailto:ravinduyasas421@gmail.com" className="social-icon">
                                 <Mail size={22} />
                             </a>
                         </div>

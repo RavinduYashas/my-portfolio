@@ -12,7 +12,8 @@
 }
 
 .footer-logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.03em;
     font-size: 1.75rem;
     font-weight: 800;
     color: var(--text-white);

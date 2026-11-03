@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -18,6 +18,7 @@ const Footer = () => {
                             <a href="#about">About</a>
                             <a href="#skills">Skills</a>
                             <a href="#projects">Projects</a>
+                            <a href="#certifications">Certifications</a>
                             <a href="#contact">Contact</a>
                         </div>
                     </div>
@@ -27,7 +28,7 @@ const Footer = () => {
                         <div className="footer-social-icons">
                             <a href="https://github.com/RavinduYashas" target="_blank" rel="noreferrer"><Github size={20} /></a>
                             <a href="https://linkedin.com/in/ravindu-yashas-990179366/" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
-                            <a href="mailto:ravinduyashas421@gmail.com"><Mail size={20} /></a>
+                            <a href="mailto:ravinduyasas421@gmail.com"><Mail size={20} /></a>
                         </div>
                     </div>
                 </div>

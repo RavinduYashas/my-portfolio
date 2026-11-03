@@ -59,7 +59,7 @@ const Contact = () => {
                                 <div className="method-icon"><Mail size={20} /></div>
                                 <div className="method-text">
                                     <span>Email</span>
-                                    <a href="mailto:ravinduyashas421@gmail.com">ravinduyashas421@gmail.com</a>
+                                    <a href="mailto:ravinduyasas421@gmail.com">ravinduyasas421@gmail.com</a>
                                 </div>
                             </div>
 
